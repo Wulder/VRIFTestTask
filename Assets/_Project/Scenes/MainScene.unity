@@ -20096,7 +20096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ffc35df5d0b79c408d465d525d54e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keyboard: {fileID: 0}
   _eventSystem: {fileID: 869719019}
   _inputNavigationAction: {fileID: -6974819332400503191, guid: e39f4b35a6db18348b41eb0262520e69,
     type: 3}

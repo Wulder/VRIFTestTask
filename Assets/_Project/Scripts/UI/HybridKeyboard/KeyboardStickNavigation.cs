@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 
 public class KeyboardStickNavigation : MonoBehaviour
 {
-    [SerializeField] private VRKeyboard _keyboard;
     [SerializeField] private EventSystem _eventSystem; //event system handling keyboard
     [SerializeField] private InputActionReference _inputNavigationAction; //action from stick/wasd
     [SerializeField] private InputActionReference _inputPressAction; //action for pressing on keys
