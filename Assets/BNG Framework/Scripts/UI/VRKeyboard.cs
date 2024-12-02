@@ -16,11 +16,11 @@ namespace BNG {
 
         List<VRKeyboardKey> KeyboardKeys;
 
-        void Awake() {
+        public virtual void Awake() {
             KeyboardKeys = transform.GetComponentsInChildren<VRKeyboardKey>().ToList();
         }
 
-        public void PressKey(string key) {
+        public virtual void PressKey(string key) {
 
             if(AttachedInputField != null) {
                 UpdateInputField(key);
@@ -30,7 +30,7 @@ namespace BNG {
             }
         }
 
-        public void UpdateInputField(string key) {
+        public virtual void UpdateInputField(string key) {
             string currentText = AttachedInputField.text;
             int caretPosition = AttachedInputField.caretPosition;
             int textLength = currentText.Length;
@@ -100,15 +100,15 @@ namespace BNG {
             }
         }
 
-        public void MoveCaretUp() {
+        public virtual void MoveCaretUp() {
             StartCoroutine(IncreaseInputFieldCareteRoutine());
         }
 
-        public void MoveCaretBack() {
+        public virtual void MoveCaretBack() {
             StartCoroutine(DecreaseInputFieldCareteRoutine());
         }
 
-        public void ToggleShift() {
+        public virtual void ToggleShift() {
             UseShift = !UseShift;
 
             foreach(var key in KeyboardKeys) {
@@ -130,7 +130,7 @@ namespace BNG {
             AttachedInputField.ForceLabelUpdate();
         }
 
-        public void AttachToInputField(UnityEngine.UI.InputField inputField) {
+        public virtual void AttachToInputField(UnityEngine.UI.InputField inputField) {
             AttachedInputField = inputField;
         }
     }
